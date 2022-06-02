@@ -106,7 +106,15 @@ class JokeScreen extends StatelessWidget {
         FutureBuilder<Joke?>(
             future: humoreska,
             builder: (context, snapshot) {
-              if (snapshot.data?.value == null) return Text('loading...', style: TextStyle(fontSize: big, fontFamily: 'roboto',),);
+              if (snapshot.data?.value == null) {
+                return const Text(
+                  'loading...',
+                  style: TextStyle(
+                    fontSize: big,
+                    fontFamily: 'roboto',
+                  ),
+                );
+              }
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: big),
                 child: Text(

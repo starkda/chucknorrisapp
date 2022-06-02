@@ -1,5 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
+
 part 'Joke.g.dart';
+
 @JsonSerializable()
 class Joke {
   List<dynamic> categories;
@@ -10,8 +12,8 @@ class Joke {
   String url;
   String value = 'Loading...';
 
-  Joke(
-      this.categories, this.created_at, this.icon_url, this.id, this.updated_at, this.url, this.value
-      );
+  Joke(this.categories, this.created_at, this.icon_url, this.id,
+      this.updated_at, this.url, this.value);
+
   factory Joke.fromjson(Map<String, dynamic> dt) => _$JokeFromJson(dt);
 }

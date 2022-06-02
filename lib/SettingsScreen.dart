@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
 
 class SettingsScreen extends StatelessWidget {
   final changeColor;
@@ -9,6 +8,7 @@ class SettingsScreen extends StatelessWidget {
   static const double middle = 20;
   static const double small = 10;
   static const double zero = 0.0;
+
   SettingsScreen(this.toJoke, this.changeColor, this.cur_color);
 
   @override
@@ -91,12 +91,14 @@ class SettingsScreen extends StatelessWidget {
                 ])
               ],
             )),
-        floatingActionButton: Padding(padding:EdgeInsets.fromLTRB(zero, zero, 300, zero), child:FloatingActionButton(
-          onPressed: () {
-            toJoke();
-          },
-          child:Icon(Icons.arrow_back),
-          backgroundColor: cur_color,
-        )));
+        floatingActionButton: Padding(
+            padding: EdgeInsets.fromLTRB(zero, zero, 300, zero),
+            child: FloatingActionButton(
+              onPressed: () {
+                toJoke();
+              },
+              child: Icon(Icons.arrow_back),
+              backgroundColor: cur_color,
+            )));
   }
 }

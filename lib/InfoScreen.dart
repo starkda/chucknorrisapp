@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
 
 class InfoScreen extends StatelessWidget {
   final toJoke;
@@ -25,7 +24,9 @@ class InfoScreen extends StatelessWidget {
         body: Column(
           children: [
             Image(
-              image: AssetImage('assets/chuck1.png', ),
+              image: AssetImage(
+                'assets/chuck1.png',
+              ),
             ),
             SizedBox(
               height: 15,
