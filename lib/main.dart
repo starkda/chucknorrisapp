@@ -1,17 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/InfoScreen.dart';
 import 'JokeScreen.dart';
-import 'SettingsScreen.dart';
+import 'settings_screen.dart';
+import 'favourites_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'dart:io';
+import 'fetches.dart';
 
-void main() => runApp(const MyApp());
+late File myFile;
+String content = '';
+
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  static const String _title = 'Flutter Code Sample';
-
   @override
   Widget build(BuildContext context) {
+    Firebase.initializeApp();
+    fetchFile();
     return const MaterialApp(
       home: MainScreen(),
     );
@@ -49,6 +58,11 @@ class _MainScreenState extends State<MainScreen> {
     setState(() {});
   }
 
+  toFav() {
+    val = 3;
+    setState(() {});
+  }
+
   @override
   void initState() {
     super.initState();
@@ -61,13 +75,17 @@ class _MainScreenState extends State<MainScreen> {
 
   Widget requiredScreen(int num) {
     if (num == 0) {
-      return JokeScreen(toSettings, toInfo, toJoke, _MainScreenState.style);
+      return JokeScreen(
+          toSettings, toInfo, toJoke, toFav, _MainScreenState.style);
     }
     if (num == 1) {
       return SettingsScreen(toJoke, changeColor, _MainScreenState.style);
     }
     if (num == 2) {
       return InfoScreen(toJoke, _MainScreenState.style);
+    }
+    if (num == 3) {
+      return FavScreen(toJoke, _MainScreenState.style);
     }
     throw Exception("Undefined condition");
   }

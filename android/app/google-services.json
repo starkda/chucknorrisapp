@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1012711642799",
+    "project_id": "chuckjoke-6b100",
+    "storage_bucket": "chuckjoke-6b100.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1012711642799:android:849689a9319c46fca7a65a",
+        "android_client_info": {
+          "package_name": "com.example.untitled"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1012711642799-89cl996jr1erame9jpu26nhcnd37ppjj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgKf0ISvwyHHrVK3EgVM76BY_CBi16YXo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1012711642799-89cl996jr1erame9jpu26nhcnd37ppjj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

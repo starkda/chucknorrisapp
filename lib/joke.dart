@@ -1,6 +1,7 @@
+//ignore_for_file: true
 import 'package:json_annotation/json_annotation.dart';
 
-part 'Joke.g.dart';
+part 'joke.g.dart';
 
 @JsonSerializable()
 class Joke {
@@ -10,7 +11,7 @@ class Joke {
   String id;
   String updated_at;
   String url;
-  String value = 'Loading...';
+  String value = 'efeofj...';
 
   Joke(this.categories, this.created_at, this.icon_url, this.id,
       this.updated_at, this.url, this.value);

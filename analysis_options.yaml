@@ -9,6 +9,14 @@
 # packages, and plugins designed to encourage good coding practices.
 include: package:flutter_lints/flutter.yaml
 
+analyzer:
+  exclude: [lib/joke.dart, lib/joke.g.dart]
+  # there are 2 reasons why I excluded this file:
+  # first, linter doesn't like name of the file I import, it is json_annotation file,
+  # so I got nothing to do with it
+  # second, It doesn't like names of my variables, but they depend on names of chucknorris API
+  # fields, any other names will break JsonSerializable so I got nothing to do there neither
+
 linter:
   # The lint rules applied to this project can be customized in the
   # section below to disable rules from the `package:flutter_lints/flutter.yaml`
@@ -22,6 +30,7 @@ linter:
   # `// ignore_for_file: name_of_lint` syntax on the line or in the file
   # producing the lint.
   rules:
+
     # avoid_print: false  # Uncomment to disable the `avoid_print` rule
     # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
 

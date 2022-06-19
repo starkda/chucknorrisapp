@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
 
 class InfoScreen extends StatelessWidget {
-  final toJoke;
-  final Color cur_color;
+  final dynamic toJoke;
+  final Color curColor;
   static const double big = 30;
   static const double middle = 20;
   static const double small = 10;
   static const double zero = 0.0;
 
-  InfoScreen(this.toJoke, this.cur_color);
+  const InfoScreen(this.toJoke, this.curColor, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: cur_color,
+          backgroundColor: curColor,
           title: const Center(
             child: SafeArea(
-                child: Text('Developer info'),
-                minimum: EdgeInsets.fromLTRB(zero, 40, zero, 60)),
+                minimum: EdgeInsets.fromLTRB(zero, 40, zero, 60),
+                child: Text('Developer info')),
           ),
         ),
         body: Column(
-          children: [
+          children: const [
             Image(
               image: AssetImage(
                 'assets/chuck1.png',
@@ -40,13 +40,13 @@ class InfoScreen extends StatelessWidget {
           ],
         ),
         floatingActionButton: Padding(
-            padding: EdgeInsets.fromLTRB(zero, zero, 300, zero),
+            padding: const EdgeInsets.fromLTRB(zero, zero, 300, zero),
             child: FloatingActionButton(
               onPressed: () {
                 toJoke();
               },
-              child: Icon(Icons.arrow_back),
-              backgroundColor: cur_color,
+              backgroundColor: curColor,
+              child: const Icon(Icons.arrow_back),
             )));
   }
 }
